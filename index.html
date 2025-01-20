@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Question Answering Web App</title>
+</head>
+<body>
+    <h1>Chapters</h1>
+    <ul>
+      {% for name, path in chapters.items() %}
+        <li><a href="{{ url_for('chapter', name=name) }}">{{ name }}</a></li>
+      {% endfor %}
+    </ul>
+</body>
+</html>
